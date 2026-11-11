@@ -21,29 +21,29 @@ export function Story() {
           <div aria-hidden className="absolute bottom-[16%] left-0 top-[22%] hidden w-[34%] bg-rose/35 lg:block" />
 
           {/* Dominant: proposal box inspiration */}
-          <figure className="absolute left-0 top-[4%] w-[68%] md:w-[46%] lg:left-[calc(var(--gutter)+4%)] lg:top-[calc(var(--header-h)+5%)] lg:h-[70%] lg:w-auto lg:aspect-[440/602]">
+          <figure className="absolute left-0 top-[4%] w-[68%] md:w-[46%] lg:left-[calc(var(--gutter)+4%)] lg:top-[calc(var(--header-h)+5%)] lg:h-[56%] lg:w-auto lg:aspect-[9/10]">
             <div className="relative overflow-hidden lg:h-full">
-              <img src={inspiration.src} alt={inspiration.alt} width={inspiration.width} height={inspiration.height} loading="lazy" className="reveal-img aspect-[440/602] w-full object-cover lg:h-full" />
+              <img src={inspiration.src} alt={inspiration.alt} width={inspiration.width} height={inspiration.height} loading="lazy" className="reveal-img aspect-[9/10] w-full object-cover lg:h-full" />
               <span className={chip}>{story.inspirationLabel}</span>
             </div>
-            <figcaption className="mt-3 hidden max-w-[24rem] lg:block">
+            <figcaption className="mt-3 hidden max-w-[21rem] lg:block">
               <span className="label block text-espresso">{inspiration.caption}</span>
               <span className="mt-1.5 block text-[0.8125rem] font-light leading-snug text-espresso/65">{story.inspirationNote}</span>
             </figcaption>
           </figure>
 
           {/* Personal thread: Cydney's own proposal photograph */}
-          <figure className="reveal absolute right-0 top-0 z-10 w-[38%] md:right-[8%] md:w-[30%] lg:right-[7%] lg:top-[calc(var(--header-h)+2%)] lg:w-[29%]" style={{ ['--d' as string]: 2 }}>
+          <figure className="reveal absolute right-0 top-0 z-10 w-[38%] md:right-[8%] md:w-[30%] lg:right-[3%] lg:top-[calc(var(--header-h)+2%)] lg:w-[27%]" style={{ ['--d' as string]: 2 }}>
             <div className="overflow-hidden border-[6px] border-ivory lg:border-8">
               <img src={proposal.src} alt={proposal.alt} width={proposal.width} height={proposal.height} loading="lazy" className="img-zoom aspect-[3/4] w-full object-cover object-[38%_12%]" />
             </div>
-            <figcaption className="label mt-1 px-1.5 font-light text-espresso/75">{proposal.caption}</figcaption>
+            <figcaption className="label bg-ivory px-1.5 pt-1 font-light text-espresso/75">{proposal.caption}</figcaption>
           </figure>
 
           {/* Supporting detail: stationery, satin and keepsakes, overlapping the box's corner */}
           <figure className="reveal absolute bottom-0 right-[4%] z-20 w-[46%] md:right-[24%] md:w-[34%] lg:bottom-[9%] lg:right-[12%] lg:w-[33%]" style={{ ['--d' as string]: 3 }}>
             <div className="relative overflow-hidden border-[6px] border-ivory lg:border-8">
-              <img src={detail.src} alt={detail.alt} width={detail.width} height={detail.height} loading="lazy" className="img-zoom aspect-square w-full object-cover" />
+              <img src={detail.src} alt={detail.alt} width={detail.width} height={detail.height} loading="lazy" className="img-zoom aspect-[4/3] w-full object-cover" />
               <span className={chip}>{story.inspirationLabel}</span>
             </div>
             <figcaption className="label mt-1 px-1.5 font-light text-espresso/75">{detail.caption}</figcaption>

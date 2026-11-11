@@ -39,7 +39,7 @@ export function ProposalBox() {
 
         {/* Layered over the seam: the ribbon close-up and the annotated concept */}
         <div className="relative z-20 -mt-[16%] flex items-start justify-between gap-3 px-gutter lg:contents">
-          <figure className="reveal w-[38%] rotate-[2deg] border-[6px] border-ivory bg-ivory lg:absolute lg:left-[41%] lg:top-[calc(var(--header-h)+5%)] lg:z-20 lg:mt-0 lg:w-[17%] lg:border-8" style={{ ['--d' as string]: 2 }}>
+          <figure className="reveal w-[38%] rotate-[2deg] border-[6px] border-ivory bg-ivory lg:absolute lg:left-[42%] lg:top-[calc(var(--header-h)+5%)] lg:z-20 lg:mt-0 lg:w-[13%] lg:border-8" style={{ ['--d' as string]: 2 }}>
             <div className="relative overflow-hidden">
               <img src={ribbon.src} alt={ribbon.alt} width={ribbon.width} height={ribbon.height} loading="lazy" className="img-zoom h-auto w-full" />
               <span className="label absolute left-1.5 top-1.5 bg-ivory/90 px-1.5 py-0.5 text-burgundy">{box.detailsLabel}</span>

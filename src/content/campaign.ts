@@ -11,13 +11,12 @@ import ringPortrait from '../assets/images/creator-ring-portrait.webp'
 import versacePhoto from '../assets/images/campaign-versace.webp'
 import michaelKorsPhoto from '../assets/images/campaign-michael-kors.webp'
 import kenyaPoster from '../assets/images/campaign-kenya-moore-poster.webp'
-import inspoEvelyn from '../assets/images/inspiration-box-evelyn.webp'
-import inspoEvelynRibbon from '../assets/images/inspiration-box-evelyn-ribbon.webp'
-import inspoAshley from '../assets/images/inspiration-box-ashley.webp'
+import inspoEspresso from '../assets/images/inspiration-wrap-espresso.webp'
+import inspoSofia from '../assets/images/inspiration-stationery-sofia.webp'
+import inspoBride from '../assets/images/inspiration-box-bride-velvet.webp'
+import inspoCeline from '../assets/images/inspiration-wrap-ivory-calla.webp'
 import inspoLayla from '../assets/images/inspiration-box-layla.webp'
-import inspoAshleyStationery from '../assets/images/inspiration-box-ashley-stationery.webp'
 import boxIllustration from '../assets/illustrations/proposal-box.svg'
-import frameReveal from '../assets/illustrations/frame-curated-reveal.svg'
 import frameBeauty from '../assets/illustrations/frame-beauty-edit.svg'
 import frameProposal from '../assets/illustrations/frame-proposal-moment.svg'
 
@@ -86,18 +85,18 @@ export const story = {
     },
     /* Third-party inspiration: shows the direction only, never presented as Cydney's own box */
     inspiration: {
-      src: inspoEvelyn,
-      alt: 'Inspiration image: a closed ivory gift box tied with an ivory satin bow, personalized “Evelyn, Maid of Honor” in raised lettering, on draped satin with white roses',
-      width: 880,
-      height: 1204,
-      caption: 'The ivory box, satin bow and personalized lid',
+      src: inspoEspresso,
+      alt: 'Inspiration image: gift boxes wrapped in deep espresso satin, each knotted at the top with a stem of white orchids',
+      width: 900,
+      height: 1000,
+      caption: 'Satin-wrapped boxes finished with white orchids',
     },
     detail: {
-      src: inspoAshley,
-      alt: 'Inspiration image: an open bridesmaid gift set with a personalized frosted tumbler, burgundy proposal cards, a red rose, satin scrunchies and a jewelry case',
-      width: 600,
-      height: 600,
-      caption: 'Stationery, satin and keepsakes',
+      src: inspoSofia,
+      alt: 'Inspiration image: two engraved silver compacts, a black and white photo strip and a “Will you be my Maid of Honor?” card on white linen',
+      width: 809,
+      height: 601,
+      caption: 'Engraved keepsakes and personalized stationery',
     },
     bouquet: {
       src: bouquetPhoto,
@@ -129,18 +128,11 @@ export const box = {
   /* Close-ups from third-party inspiration images, labeled as such on the page */
   details: [
     {
-      title: 'Satin ribbon and personalized lid',
-      src: inspoEvelynRibbon,
-      alt: 'Inspiration close-up: an ivory satin bow on a gift box lid with raised “Evelyn, Maid of Honor” lettering',
-      width: 1050,
-      height: 900,
-    },
-    {
-      title: 'Personalized stationery',
-      src: inspoAshleyStationery,
-      alt: 'Inspiration close-up: a burgundy “will you help me tie the knot” card with a knot bracelet, a red rose and a personalized name tag',
-      width: 570,
-      height: 510,
+      title: 'Velvet ribbon and personalized tag',
+      src: inspoBride,
+      alt: 'Inspiration close-up: a white gift box tied with a burgundy velvet ribbon and a “Bride to be” tag',
+      width: 790,
+      height: 1160,
     },
   ],
   detailsLabel: 'Inspiration',
@@ -179,9 +171,9 @@ export const storyboard = {
       number: '01',
       title: 'The Curated Reveal',
       text: 'A cinematic Reel or TikTok showcasing the proposal box assembly, thoughtful product selection, and final presentation.',
-      src: frameReveal,
-      alt: 'Concept illustration: gift boxes wrapped in burgundy and champagne satin with a white calla lily',
-      kind: 'Illustration',
+      src: inspoCeline,
+      alt: 'Inspiration image: a gift box wrapped in white satin with a knotted bow and a single white calla lily',
+      kind: 'Inspiration',
     },
     {
       number: '02',
@@ -211,7 +203,7 @@ export const storyboard = {
   stripLabel: 'Proposed content concepts',
   frameLabel: 'Sc.',
   noteLabel: 'Note',
-  disclaimer: 'Proposed content concepts, not completed deliverables. Frames 01 to 03 are original illustrations; frame 04 is Cydney’s own photograph.',
+  disclaimer: 'Proposed content concepts, not completed deliverables. Frame 01 is an inspiration image, frames 02 and 03 are original illustrations, and frame 04 is Cydney’s own photograph.',
 }
 
 export const credentials = {
