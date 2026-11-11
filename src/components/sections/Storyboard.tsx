@@ -9,9 +9,9 @@ import { Eyebrow, Section } from '../Section'
  */
 const layout = [
   { li: 'w-full lg:w-[31%]', aspect: '392 / 260', pos: '50% 40%' },
-  { li: 'w-[82%] self-end lg:z-10 lg:-ml-[4%] lg:w-[23%] lg:self-auto lg:mt-[7%]', aspect: '392 / 260', pos: '50% 40%', frame: 'lg:border-8 lg:border-champagne' },
-  { li: 'w-[72%] lg:w-[19%] lg:mt-[3%]', aspect: '1 / 1', pos: '35% 50%' },
-  { li: 'w-[86%] self-end lg:w-[21%] lg:self-auto lg:mt-0', aspect: '5 / 6', pos: '50% 30%' },
+  { li: 'w-[82%] self-end lg:z-10 lg:-ml-[4%] lg:w-[23%] lg:self-auto lg:mt-[7%]', aspect: '392 / 260', pos: '50% 48%', frame: 'lg:border-8 lg:border-champagne' },
+  { li: 'w-[86%] lg:w-[22%] lg:mt-[3%]', aspect: '4 / 3', pos: '50% 40%' },
+  { li: 'w-[80%] self-end lg:w-[19%] lg:self-auto lg:mt-0', aspect: '5 / 6', pos: '50% 30%' },
 ]
 
 export function Storyboard() {

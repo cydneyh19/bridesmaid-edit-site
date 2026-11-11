@@ -145,10 +145,25 @@ function Invitation() {
         </div>
       </div>
 
-      <div className="shell">
+      <div className="shell flex flex-col gap-10 lg:flex-row lg:items-center lg:justify-between">
         <p className="reveal max-w-[18ch] font-display text-h2 font-medium" style={{ ['--d' as string]: 2 }}>
           {credentials.closingLead} <em className="font-normal text-champagne">{credentials.closingAccent}</em>
         </p>
+        {/* Cydney's own photographs, layered: the fragrance portrait leads, the bouquet tucks under its corner */}
+        <div className="relative flex items-start gap-3 lg:mr-[4%] lg:block lg:h-[clamp(11rem,24vh,15rem)] lg:w-[clamp(20rem,31vw,28rem)]">
+          {credentials.closingImages.map((im, i) => (
+            <figure
+              key={im.src}
+              className={`reveal ${i === 0 ? 'w-[46%] lg:absolute lg:-top-[12%] lg:right-0 lg:z-10 lg:w-[44%]' : 'mt-10 w-[44%] lg:absolute lg:bottom-0 lg:left-0 lg:mt-0 lg:w-[56%]'}`}
+              style={{ ['--d' as string]: 3 + i }}
+            >
+              <div className="overflow-hidden border-[5px] border-ivory/90">
+                <img src={im.src} alt={im.alt} width={im.width} height={im.height} loading="lazy" className={`img-zoom w-full object-cover ${i === 0 ? 'aspect-[3/4] object-[50%_30%]' : 'aspect-[5/4] object-[45%_35%]'}`} />
+              </div>
+              <figcaption className="label mt-1.5 font-light text-ivory/70">{im.caption}</figcaption>
+            </figure>
+          ))}
+        </div>
       </div>
 
       <div className="shell grid-editorial items-end gap-y-12">

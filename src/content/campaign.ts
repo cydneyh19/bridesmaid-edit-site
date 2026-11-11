@@ -17,8 +17,9 @@ import inspoBride from '../assets/images/inspiration-box-bride-velvet.webp'
 import inspoCeline from '../assets/images/inspiration-wrap-ivory-calla.webp'
 import inspoLayla from '../assets/images/inspiration-box-layla.webp'
 import boxIllustration from '../assets/illustrations/proposal-box.svg'
-import frameBeauty from '../assets/illustrations/frame-beauty-edit.svg'
-import frameProposal from '../assets/illustrations/frame-proposal-moment.svg'
+import inspoFragrance from '../assets/images/inspiration-fragrance-satin.webp'
+import inspoProposalMoment from '../assets/images/inspiration-proposal-moment.webp'
+import fragranceProfile from '../assets/images/creator-fragrance-profile.webp'
 
 export const sections = [
   { id: 'cover', number: '00', short: 'Cover', title: 'The Bridesmaid Edit' },
@@ -179,17 +180,17 @@ export const storyboard = {
       number: '02',
       title: 'The Beauty Edit',
       text: 'Editorial product close-ups, beauty routines, and storytelling highlighting selected brand partners.',
-      src: frameBeauty,
-      alt: 'Concept illustration: an unbranded fragrance bottle, lip oil and cream jar on champagne silk',
-      kind: 'Illustration',
+      src: inspoFragrance,
+      alt: 'Inspiration image: a square glass fragrance bottle resting in folds of glowing champagne satin',
+      kind: 'Inspiration',
     },
     {
       number: '03',
       title: 'The Proposal Moment',
       text: 'Authentic bridesmaid reactions and personal moments as the gifts are revealed.',
-      src: frameProposal,
-      alt: 'Concept illustration: a handwritten proposal card, a photo strip, a calla lily and a burgundy ribbon on ivory satin',
-      kind: 'Illustration',
+      src: inspoProposalMoment,
+      alt: 'Inspiration image: bridesmaids in burgundy, olive and champagne satin react with tears and laughter as one reads a “Will you be my Bridesmaid?” card at a candlelit table with burgundy gift boxes and calla lilies',
+      kind: 'Inspiration',
     },
     {
       number: '04',
@@ -203,7 +204,7 @@ export const storyboard = {
   stripLabel: 'Proposed content concepts',
   frameLabel: 'Sc.',
   noteLabel: 'Note',
-  disclaimer: 'Proposed content concepts, not completed deliverables. Frame 01 is an inspiration image, frames 02 and 03 are original illustrations, and frame 04 is Cydney’s own photograph.',
+  disclaimer: 'Proposed content concepts, not completed deliverables. Frames 01 to 03 are inspiration images, and frame 04 is Cydney’s own photograph.',
 }
 
 export const credentials = {
@@ -253,6 +254,23 @@ export const credentials = {
   closing: 'Let’s make the moments before “I do” just as unforgettable.',
   closingLead: 'Let’s make the moments before “I\u00a0do” just as',
   closingAccent: 'unforgettable.',
+  /* Cydney's own photographs for the closing spread */
+  closingImages: [
+    {
+      src: fragranceProfile,
+      alt: 'Cydney in profile with eyes closed, holding a gold fragrance bottle to her cheek under a blue sky',
+      width: 900,
+      height: 1600,
+      caption: 'Cydney’s fragrance content',
+    },
+    {
+      src: bouquetPhoto,
+      alt: 'Cydney’s bridal bouquet of white calla lilies, anthurium, burgundy orchids and trailing amaranthus against a brick wall',
+      width: 844,
+      height: 1500,
+      caption: 'The bridal bouquet',
+    },
+  ],
   monogram: ['C', 'H'],
   breakdownLabel: 'Engagement breakdown',
   images: {
