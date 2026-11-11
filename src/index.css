@@ -1,0 +1,221 @@
+@import './theme/tokens.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    background: rgb(var(--c-ivory));
+    color: rgb(var(--c-espresso));
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    scroll-padding-top: var(--header-h);
+  }
+  body {
+    min-height: 100%;
+    overflow-x: hidden;
+  }
+  ::selection {
+    background: rgb(var(--c-rose));
+    color: rgb(var(--c-espresso));
+  }
+  :focus-visible {
+    outline: 2px solid rgb(var(--c-burgundy));
+    outline-offset: 3px;
+  }
+  .on-dark :focus-visible {
+    outline-color: rgb(var(--c-rose));
+  }
+  img {
+    display: block;
+  }
+}
+
+@layer components {
+  /* Full-width element whose content aligns with .shell */
+  .pad-shell {
+    padding-inline: max(var(--gutter), calc((100% - 1680px) / 2 + var(--gutter)));
+  }
+  /* Vertical running title on a page edge, read bottom to top */
+  .vertical-rl {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+  }
+  .label {
+    @apply font-sans text-label font-medium uppercase;
+  }
+  .shell {
+    @apply mx-auto w-full max-w-[1680px] px-gutter;
+  }
+  .grid-editorial {
+    @apply grid grid-cols-4 gap-x-4 md:grid-cols-8 md:gap-x-6 lg:grid-cols-12 lg:gap-x-8;
+  }
+  .link-draw {
+    background-image: linear-gradient(currentColor, currentColor);
+    background-size: 0% 1px;
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    transition: background-size 500ms var(--ease-out);
+  }
+  .link-draw:hover,
+  .link-draw:focus-visible {
+    background-size: 100% 1px;
+  }
+  .img-zoom {
+    transition: transform 1200ms var(--ease-out);
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    .group:hover .img-zoom {
+      transform: scale(1.03);
+    }
+  }
+}
+
+/* Reveal on enter. Sections receive .is-visible from useReveal. */
+.reveal {
+  opacity: 0;
+  transform: translate3d(0, 24px, 0);
+  transition:
+    opacity 900ms var(--ease-out),
+    transform 900ms var(--ease-out);
+  transition-delay: calc(var(--d, 0) * 110ms);
+}
+.is-visible .reveal {
+  opacity: 1;
+  transform: none;
+}
+
+/* Headline lines slide up from behind a mask */
+.line-mask {
+  overflow: hidden;
+  padding: 0 0.12em 0.14em 0;
+  margin: 0 -0.12em -0.14em 0;
+}
+.reveal-line {
+  transform: translate3d(0, 108%, 0);
+  transition: transform 1100ms var(--ease-out);
+  transition-delay: calc(var(--d, 0) * 120ms);
+}
+.is-visible .reveal-line {
+  transform: none;
+}
+
+/* Photographs reveal with a wipe */
+.reveal-img {
+  clip-path: inset(0 0 100% 0);
+  transition: clip-path 1300ms var(--ease-out);
+  transition-delay: calc(var(--d, 0) * 110ms);
+}
+.is-visible .reveal-img {
+  clip-path: inset(0 0 0 0);
+}
+
+/* Rotating seal and brand marquee */
+@keyframes spin-slow {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.seal {
+  animation: spin-slow 40s linear infinite;
+}
+@keyframes marquee {
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+.marquee-track {
+  animation: marquee 38s linear infinite;
+}
+.marquee:hover .marquee-track {
+  animation-play-state: paused;
+}
+
+/* Presentation mode */
+html.presenting {
+  scroll-snap-type: y mandatory;
+  scroll-padding-top: 0;
+}
+html.presenting [data-slide] {
+  scroll-snap-align: start;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+  .reveal-img {
+    clip-path: none;
+  }
+  .reveal-line {
+    transform: none;
+  }
+  .marquee-track {
+    flex-wrap: wrap;
+    width: auto;
+  }
+  .marquee-dup {
+    display: none;
+  }
+}
+
+/* Print: landscape 16:9 pages, one section per page */
+@media print {
+  @page {
+    size: 1920px 1080px;
+    margin: 0;
+  }
+  :root {
+    --section-pad: 4.5rem;
+    --header-h: 0px;
+  }
+  html,
+  body {
+    background: rgb(var(--c-ivory));
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    scroll-behavior: auto;
+  }
+  .no-print {
+    display: none !important;
+  }
+  [data-slide] {
+    width: 1920px;
+    height: 1080px;
+    min-height: 0 !important;
+    overflow: hidden;
+    break-after: page;
+    page-break-after: always;
+  }
+  .reveal-img {
+    clip-path: none !important;
+  }
+  .reveal-line {
+    transform: none !important;
+  }
+  .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+  .seal,
+  .marquee-track {
+    animation: none !important;
+  }
+}

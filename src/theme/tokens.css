@@ -1,0 +1,44 @@
+/*
+ * The Bridesmaid Edit: brand theme variables.
+ * Colors are RGB channels so Tailwind opacity modifiers work.
+ * A brand-specific version of the site only needs to change this file and src/content.
+ */
+:root {
+  --c-burgundy: 128 50 14;   /* #80320E */
+  --c-rose: 205 160 155;     /* #CDA09B */
+  --c-champagne: 218 192 168;/* #DAC0A8 */
+  --c-ivory: 247 243 237;    /* #F7F3ED */
+  --c-espresso: 53 42 39;    /* #352A27 */
+
+  --font-display: 'Cormorant Garamond', 'Bodoni Moda', Didot, Georgia, serif;
+  --font-sans: Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+  --fs-mega: clamp(2.75rem, min(13.5vw, 24vh), 15rem);
+  --fs-display: clamp(2.75rem, min(8vw, 14vh), 8.5rem);
+  --fs-h2: clamp(2.375rem, min(5.5vw, 8.2vh), 5.75rem);
+  --fs-lede: clamp(1.25rem, 2vw, 1.75rem);
+  --fs-statement: clamp(2rem, 3.4vw, 3.5rem);   /* closing line, contact block */
+  --fs-marquee: clamp(2.5rem, 6vw, 6.5rem);     /* brand marquee */
+  --fs-h3: clamp(1.25rem, 1.8vw, 1.875rem);     /* index rows, frame titles */
+  --fs-numeral: clamp(3.5rem, min(6vw, 11vh), 6.5rem); /* hero metric, Inter */
+  --fs-stat: clamp(1.75rem, 2.7vw, 2.75rem);    /* supporting numerals, Inter */
+  --fs-body: 1.0625rem;                         /* 17px; 16px in compact mode */
+  --c-frame: 42 33 31;                          /* espresso, one step deeper: film frame mat */
+
+  --gutter: clamp(1.25rem, 4vw, 4rem);
+  --section-pad: clamp(4rem, min(10vw, 9vh), 9rem);
+  --header-h: 4rem;
+
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Short desktop screens (13 to 15 inch laptops): tighten rem-based rhythm so each slide fits. */
+@media screen and (min-width: 1024px) and (max-height: 940px) {
+  :root {
+    font-size: 15px;
+    --section-pad: 3.25rem;
+    --fs-h2: clamp(2.375rem, min(5vw, 7.2vh), 5rem);
+    --fs-display: clamp(2.75rem, min(7vw, 11vh), 7rem);
+    --fs-body: 0.9375rem;
+  }
+}
