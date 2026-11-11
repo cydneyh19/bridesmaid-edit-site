@@ -11,6 +11,10 @@ import ringPortrait from '../assets/images/creator-ring-portrait.webp'
 import versacePhoto from '../assets/images/campaign-versace.webp'
 import michaelKorsPhoto from '../assets/images/campaign-michael-kors.webp'
 import kenyaPoster from '../assets/images/campaign-kenya-moore-poster.webp'
+import inspoEvelyn from '../assets/images/inspiration-box-evelyn.webp'
+import inspoEvelynRibbon from '../assets/images/inspiration-box-evelyn-ribbon.webp'
+import inspoAshley from '../assets/images/inspiration-box-ashley.webp'
+import inspoAshleyStationery from '../assets/images/inspiration-box-ashley-stationery.webp'
 import boxIllustration from '../assets/illustrations/proposal-box.svg'
 import frameReveal from '../assets/illustrations/frame-curated-reveal.svg'
 import frameBeauty from '../assets/illustrations/frame-beauty-edit.svg'
@@ -64,6 +68,8 @@ export const story = {
     'Through authentic storytelling and elevated content, participating brands have an opportunity to become part of these meaningful moments.',
   ],
   numeral: '11',
+  inspirationLabel: 'Inspiration',
+  inspirationNote: 'Inspiration images show the intended look. They are not existing Bridesmaid Edit boxes or partner products.',
   stats: [
     { value: '11', label: 'Bridesmaids, including four maids of honor' },
     { value: 'One', label: 'Curated Experience' },
@@ -76,6 +82,21 @@ export const story = {
       width: 1212,
       height: 1600,
       caption: 'Where it began. The proposal.',
+    },
+    /* Third-party inspiration: shows the direction only, never presented as Cydney's own box */
+    inspiration: {
+      src: inspoEvelyn,
+      alt: 'Inspiration image: a closed ivory gift box tied with an ivory satin bow, personalized “Evelyn, Maid of Honor” in raised lettering, on draped satin with white roses',
+      width: 880,
+      height: 1204,
+      caption: 'The ivory box, satin bow and personalized lid',
+    },
+    detail: {
+      src: inspoAshley,
+      alt: 'Inspiration image: an open bridesmaid gift set with a personalized frosted tumbler, burgundy proposal cards, a red rose, satin scrunchies and a jewelry case',
+      width: 600,
+      height: 600,
+      caption: 'Stationery, satin and keepsakes',
     },
     bouquet: {
       src: bouquetPhoto,
@@ -103,10 +124,25 @@ export const box = {
     'Bridal-day essentials',
   ],
   card: { line: '[Name], will you be my', word: 'Bridesmaid?' },
-  captionLabel: 'Concept',
+  captionLabel: 'Concept illustration',
+  /* Close-ups from third-party inspiration images, labeled as such on the page */
   details: [
-    { title: 'The personalized card', crop: { x: 130, y: 70, w: 440, h: 240 }, card: true },
+    {
+      title: 'Satin ribbon and personalized lid',
+      src: inspoEvelynRibbon,
+      alt: 'Inspiration close-up: an ivory satin bow on a gift box lid with raised “Evelyn, Maid of Honor” lettering',
+      width: 1050,
+      height: 900,
+    },
+    {
+      title: 'Personalized stationery',
+      src: inspoAshleyStationery,
+      alt: 'Inspiration close-up: a burgundy “will you help me tie the knot” card with a knot bracelet, a red rose and a personalized name tag',
+      width: 570,
+      height: 510,
+    },
   ],
+  detailsLabel: 'Inspiration',
   /* Annotation positions on the illustration, as percentages, in the same order as categories */
   hotspots: [
     { x: 59.1, y: 56.7 },

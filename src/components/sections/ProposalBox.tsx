@@ -1,7 +1,6 @@
 import { box, sections } from '../../content/campaign'
 import { Folio } from '../Folio'
 import { Line } from '../Line'
-import { IllustrationCrop } from '../IllustrationCrop'
 import { Numerals } from '../Numerals'
 import { Eyebrow, Section } from '../Section'
 
@@ -51,22 +50,23 @@ export function ProposalBox() {
             </div>
           </figure>
 
-          {/* Detail crops: overlap the still life on desktop, sit in a row on mobile */}
-          <div className="relative z-20 -mt-[12%] ml-auto w-[56%] md:w-[42%] lg:absolute lg:-right-[5%] lg:bottom-[9%] lg:mt-0 lg:w-[32%]">
+          {/* Inspiration close-ups: layered over the still life on desktop, an overlapping pair on mobile */}
+          <div className="relative z-20 -mt-[8%] flex items-start justify-end gap-3 pr-1 lg:contents">
             {box.details.map((d, i) => (
-              <figure key={d.title} className="reveal rotate-[2deg] border-[6px] border-ivory bg-ivory lg:border-8" style={{ ['--d' as string]: 3 + i }}>
-                <IllustrationCrop src={box.image.src} W={W} H={H} crop={d.crop}>
-                  {d.card && (
-                    <div
-                      aria-hidden
-                      className="absolute flex flex-col items-center justify-center text-center"
-                      style={{ left: `${((150 - d.crop.x) / d.crop.w) * 100}%`, top: `${((90 - d.crop.y) / d.crop.h) * 100}%`, width: `${(400 / d.crop.w) * 100}%`, height: `${(200 / d.crop.h) * 100}%` }}
-                    >
-                      <CardText scale={W / d.crop.w} />
-                    </div>
-                  )}
-                </IllustrationCrop>
-                <figcaption className="label mt-2 font-light leading-snug text-espresso/70">
+              <figure
+                key={d.title}
+                className={`reveal border-[6px] border-ivory bg-ivory lg:absolute lg:z-20 lg:border-8 ${
+                  i === 0
+                    ? 'w-[52%] -rotate-[1.5deg] lg:-right-[6%] lg:bottom-[8%] lg:w-[36%]'
+                    : 'mt-[14%] w-[40%] rotate-[2deg] lg:-right-[3%] lg:top-[3%] lg:mt-0 lg:w-[25%]'
+                }`}
+                style={{ ['--d' as string]: 3 + i }}
+              >
+                <div className="relative overflow-hidden">
+                  <img src={d.src} alt={d.alt} width={d.width} height={d.height} loading="lazy" className="img-zoom h-auto w-full" />
+                  <span className="label absolute left-1.5 top-1.5 bg-ivory/90 px-1.5 py-0.5 text-burgundy">{box.detailsLabel}</span>
+                </div>
+                <figcaption className="label mt-2 font-light leading-snug text-espresso/75">
                   <span className="text-burgundy">{pad(i)}</span> {d.title}
                 </figcaption>
               </figure>
