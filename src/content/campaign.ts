@@ -19,7 +19,6 @@ import inspoLayla from '../assets/images/inspiration-box-layla.webp'
 import boxIllustration from '../assets/illustrations/proposal-box.svg'
 import inspoFragrance from '../assets/images/inspiration-fragrance-satin.webp'
 import inspoProposalMoment from '../assets/images/inspiration-proposal-moment.webp'
-import fragranceProfile from '../assets/images/creator-fragrance-profile.webp'
 
 export const sections = [
   { id: 'cover', number: '00', short: 'Cover', title: 'The Bridesmaid Edit' },
@@ -254,23 +253,6 @@ export const credentials = {
   closing: 'Let’s make the moments before “I do” just as unforgettable.',
   closingLead: 'Let’s make the moments before “I\u00a0do” just as',
   closingAccent: 'unforgettable.',
-  /* Cydney's own photographs for the closing spread */
-  closingImages: [
-    {
-      src: fragranceProfile,
-      alt: 'Cydney in profile with eyes closed, holding a gold fragrance bottle to her cheek under a blue sky',
-      width: 900,
-      height: 1600,
-      caption: 'Cydney’s fragrance content',
-    },
-    {
-      src: bouquetPhoto,
-      alt: 'Cydney’s bridal bouquet of white calla lilies, anthurium, burgundy orchids and trailing amaranthus against a brick wall',
-      width: 844,
-      height: 1500,
-      caption: 'The bridal bouquet',
-    },
-  ],
   monogram: ['C', 'H'],
   breakdownLabel: 'Engagement breakdown',
   images: {
