@@ -14,6 +14,7 @@ import kenyaPoster from '../assets/images/campaign-kenya-moore-poster.webp'
 import inspoEvelyn from '../assets/images/inspiration-box-evelyn.webp'
 import inspoEvelynRibbon from '../assets/images/inspiration-box-evelyn-ribbon.webp'
 import inspoAshley from '../assets/images/inspiration-box-ashley.webp'
+import inspoLayla from '../assets/images/inspiration-box-layla.webp'
 import inspoAshleyStationery from '../assets/images/inspiration-box-ashley-stationery.webp'
 import boxIllustration from '../assets/illustrations/proposal-box.svg'
 import frameReveal from '../assets/illustrations/frame-curated-reveal.svg'
@@ -143,6 +144,14 @@ export const box = {
     },
   ],
   detailsLabel: 'Inspiration',
+  /* Third-party inspiration photograph: the hero of the spread, labeled on the page */
+  hero: {
+    src: inspoLayla,
+    alt: 'Inspiration image: an open white magnetic gift box with a mauve grosgrain ribbon, a “Will you be my Maid of Honour?” card, a satin scrunchie, a personalized flute, a candle, an embossed cookie and a wrapped chocolate bar on white paper shred',
+    width: 1024,
+    height: 1024,
+    caption: 'An open magnetic box: ribbon, card and keepsakes. Not a Bridesmaid Edit box.',
+  },
   /* Annotation positions on the illustration, as percentages, in the same order as categories */
   hotspots: [
     { x: 59.1, y: 56.7 },

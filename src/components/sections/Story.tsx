@@ -56,7 +56,7 @@ export function Story() {
           {/* Oversized drop numeral, cropped by the page edge */}
           <span
             aria-hidden
-            className="pointer-events-none absolute -right-[0.06em] top-[0.1em] select-none font-sans text-[clamp(13rem,58vw,22rem)] font-extralight leading-[0.78] tracking-[-0.1em] text-rose/45 lg:bottom-[0.02em] lg:right-[0.02em] lg:top-auto lg:text-[min(30vw,58vh)]"
+            className="pointer-events-none absolute -right-[0.06em] top-[0.1em] select-none font-sans text-[clamp(13rem,58vw,22rem)] font-extralight leading-[0.78] tracking-[-0.1em] text-rose/45 lg:bottom-auto lg:right-[0.02em] lg:top-[calc(var(--header-h)+1rem)] lg:text-[min(30vw,58vh)]"
           >
             {story.numeral}
           </span>
